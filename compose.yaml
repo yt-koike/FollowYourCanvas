@@ -1,5 +1,6 @@
 services:
-  follow:
+  follow-your-canvas:
+    container_name: follow-your-canvas
     build:
       context: .
       dockerfile: Dockerfile
