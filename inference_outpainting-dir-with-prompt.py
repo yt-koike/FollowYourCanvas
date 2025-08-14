@@ -36,18 +36,11 @@ from transformers import CLIPTextModel, CLIPTokenizer, CLIPVisionModelWithProjec
 from animatediff.models.unet import UNet3DConditionModel
 from animatediff.pipelines.pipeline_animation_inference import AnimationPipeline
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from animatediff.utils.util import save_videos_grid, zero_rank_print, save_list_to_txt
+from animatediff.utils.util import save_videos_grid, zero_rank_print
 
 import numpy as np
-from accelerate.utils import set_seed
-import copy
-
-import PIL
-from matplotlib import pyplot as plt
-from animatediff.utils.video_mask import video_mask, get_anchor_target
 import cv2
 
-from tensorboardX import SummaryWriter
 
 def get_canvas_size(input_size, target_size, min_overlap, window_size):
     """Get canvas size and round number for outpainting. Currently only surppot 1 or two rounds."""
