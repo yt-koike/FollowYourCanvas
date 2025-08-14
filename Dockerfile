@@ -15,8 +15,8 @@ WORKDIR /decord/python
 RUN export PYTHONPATH="$PYTHONPATH:/decord/python"
 RUN python3.10 setup.py install --user
 
-RUN mkdir /root/follow_your_canvas
-WORKDIR /root/follow_your_canvas
 RUN python3.10 -m pip install einops omegaconf huggingface-hub==0.25.2 opencv-python matplotlib
+COPY . /root/follow_your_canvas
+WORKDIR /root/follow_your_canvas
 
 CMD ["bash"]
