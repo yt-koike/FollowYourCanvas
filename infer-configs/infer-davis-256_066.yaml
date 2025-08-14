@@ -1,8 +1,8 @@
 output_dir: "infer"
-pretrained_model_path: "YOUR_PATH/huggingface_models/StableDiffusion/stable-diffusion-2-1/"
+pretrained_model_path: "/root/follow_your_canvas/pretrained_models/huggingface_models/StableDiffusion/stable-diffusion-2-1/"
 
-motion_pretrained_model_path: 'YOUR_PATH/outpainting_ckpt/checkpoint-40000.ckpt' # or checkpoint-35000.ckpt
-lmm_path: 'YOUR_PATH/qwen/Qwen-VL-Chat'
+motion_pretrained_model_path: '/root/follow_your_canvas/pretrained_models/outpainting_ckpt/checkpoint-40000.ckpt' # or checkpoint-35000.ckpt
+lmm_path: '/root/follow_your_canvas/pretrained_models/qwen/Qwen-VL-Chat'
 
 unet_additional_kwargs:
   use_motion_module              : true
@@ -59,7 +59,7 @@ validate_overlap: [0.8, 0.4, 0.1, -0.1]
 validation_number: 1000
 start_index: 0
 
-video_dir: 'YOUR_PATH/data/480p_input_066'
+video_dir: '/root/follow_your_canvas/pretrained_models/data/480p_input_066'
 
 global_seed: -1  # yjk: outpaint
 enable_xformers_memory_efficient_attention: True
@@ -71,7 +71,7 @@ use_outpaint: true
 use_ip_plus_cross_attention: true
 ip_plus_condition: 'video'
 image_encoder_name : 'SAM'
-image_pretrained_model_path : "YOUR_PATH/sam_vit_b_01ec64.pth" # ViT-B/16
+image_pretrained_model_path : "/root/follow_your_canvas/pretrained_models/sam_vit_b_01ec64.pth" # ViT-B/16
 
 target_size: 
   - 512

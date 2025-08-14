@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - ./:/root/follow_your_canvas
     deploy:
       resources:
         reservations:
