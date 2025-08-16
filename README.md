@@ -59,9 +59,9 @@ We support outpaint with and without prompt (where the prompt will be generated 
 
 ```bash
 # outpaint the video in demo_video/panda to 2k with prompt 'a panda sitting on a grassy area in a lake, with forest mountain in the background'.
-python3 inference_outpainting-dir.py --config infer-configs/infer-9-16.yaml
-# outpaint the video in demo_video/polar to 2k without prompt.
 python3 inference_outpainting-dir-with-prompt.py --config infer-configs/prompt-panda.yaml
+# outpaint the video in demo_video/polar to 2k without prompt.
+python3 inference_outpainting-dir.py --config infer-configs/infer-9-16.yaml
 ```
 The result will be saved in /infer.
 
