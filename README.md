@@ -32,6 +32,7 @@ Since the outpainting window is 512*512*64 each time, you need a GPU with at lea
 If you have Docker installed, docker compose is the easiest way to use the code.
 ```bash
 docker compose run --remove-orphans follow-your-canvas
+cd /root/follow_your_canvas
 ```
 
 Or you can also install packages manually.
