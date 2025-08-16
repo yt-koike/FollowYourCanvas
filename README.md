@@ -27,9 +27,20 @@ Follow-Your-Canvas enables higher-resolution video outpainting with rich content
 ## 🛠️ Environment
 Before running the code, make sure you have setup the environment and installed the required packages.
 Since the outpainting window is 512*512*64 each time, you need a GPU with at least 60G memory for both training and inference.
+
+1. Install python packages
+If you have Docker installed, docker compose is the easiest way to use the code.
+```bash
+docker compose run --remove-orphans follow-your-canvas
+cd /root/follow_your_canvas
+```
+
+Or you can also install packages manually.
 ```bash
 pip install -r requirements.txt
 ```
+
+2. Download models
 Download our checkpoints [here](https://drive.google.com/file/d/1CIiEYxo6Sfe0NSTr14_W9gSKePVsyIlQ/view?usp=drive_link).  
 
 You also need to download [[sam_vit_b_01ec64](https://github.com/facebookresearch/segment-anything/tree/main?tab=readme-ov-file#model-checkpoints)], [[stable-diffusion-2-1](https://huggingface.co/stabilityai/stable-diffusion-2-1)], and [[Qwen-VL-Chat](https://huggingface.co/Qwen/Qwen-VL-Chat)].
@@ -59,9 +70,9 @@ We support outpaint with and without prompt (where the prompt will be generated 
 
 ```bash
 # outpaint the video in demo_video/panda to 2k with prompt 'a panda sitting on a grassy area in a lake, with forest mountain in the background'.
-python3 inference_outpainting-dir.py --config infer-configs/infer-9-16.yaml
-# outpaint the video in demo_video/polar to 2k without prompt.
 python3 inference_outpainting-dir-with-prompt.py --config infer-configs/prompt-panda.yaml
+# outpaint the video in demo_video/polar to 2k without prompt.
+python3 inference_outpainting-dir.py --config infer-configs/infer-9-16.yaml
 ```
 The result will be saved in /infer.
 
