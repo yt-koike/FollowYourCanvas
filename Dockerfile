@@ -16,4 +16,9 @@ RUN python3.10 setup.py install --user
 
 RUN python3.10 -m pip install einops omegaconf huggingface-hub==0.25.2 opencv-python matplotlib
 
+# If you want to include all the models in Docker image, uncommend the following lines. With these, they will be downloaded and stored under /pretrained_models/.
+#WORKDIR /
+#COPY download_models.sh /download_models.sh
+#RUN /bin/sh /download_models.sh 
+
 CMD ["bash"]
