@@ -48,9 +48,8 @@ You also need to download [[sam_vit_b_01ec64](https://github.com/facebookresearc
 Finally, these pretrained models should be organized as follows:
 ```text
 pretrained_models
-├── sam
-│   └── sam_vit_b_01ec64.pth
-├── follow-your-canvas
+├── sam_vit_b_01ec64.pth
+├── outpainting_ckpt
 │   └── checkpoint-40000.ckpt
 ├── stable-diffusion-2-1
 └── Qwen-VL-Chat

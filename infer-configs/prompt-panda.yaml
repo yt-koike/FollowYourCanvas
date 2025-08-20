@@ -1,8 +1,8 @@
 output_dir: "infer"
-pretrained_model_path: "YOUR_PATH/huggingface_models/StableDiffusion/stable-diffusion-2-1/"
+pretrained_model_path: "pretrained_models/stable-diffusion-2-1/"
 
 motion_pretrained_model_path: 'YOUR_PATH/outpainting_ckpt/checkpoint-35000.ckpt' # or checkpoint-35000.ckpt
-lmm_path: 'YOUR_PATH/qwen/Qwen-VL-Chat'
+lmm_path: 'pretrained_models/Qwen-VL-Chat'
 
 unet_additional_kwargs:
   use_motion_module              : true
@@ -69,7 +69,7 @@ use_outpaint: true
 use_ip_plus_cross_attention: true
 ip_plus_condition: 'video'
 image_encoder_name : 'SAM'
-image_pretrained_model_path : "YOUR_PATH/sam_vit_b_01ec64.pth" # ViT-B/16
+image_pretrained_model_path : "pretrained_models/sam_vit_b_01ec64.pth" # ViT-B/16
 
 target_size: 
   - 1152
